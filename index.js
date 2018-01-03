@@ -14,6 +14,7 @@ while (!done) {
             console.log(item);
         }
     }
+    
 
     var rule = readline.prompt();
     if (rule === "") {done = true;}
