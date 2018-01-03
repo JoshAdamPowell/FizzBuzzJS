@@ -3,7 +3,7 @@ console.log("Please enter the highest value you wish to count to");
 var response = readline.prompt();
 response = parseInt(response);
 var rules ={};
-done = false
+var done = false;
 while (!done) {
     console.log("Please enter the rules you wish to apply, one by one, pressing enter after each one.");
     console.log("When you are done just press enter on a blank line.");
@@ -16,27 +16,13 @@ while (!done) {
     }
 
     var rule = readline.prompt();
-    if (rule == "") {
-        done = true;
-    }
-    if (rule == "3") {
-        rules.Fizz = true;
-    }
-    if (rule == "13") {
-        rules.Fezz = true;
-    }
-    if (rule == "5") {
-        rules.Buzz = true;
-    }
-    if (rule == "7") {
-        rules.Bang = true;
-    }
-    if (rule == "11") {
-        rules.Bong = true;
-    }
-    if (rule == "1") {
-        rules.Reverse = true;
-    }
+    if (rule === "") {done = true;}
+    if (rule === "3") {rules.Fizz = true;}
+    if (rule === "13") {rules.Fezz = true;}
+    if (rule === "5") {rules.Buzz = true;}
+    if (rule === "7") {rules.Bang = true;}
+    if (rule === "11") {rules.Bong = true;}
+    if (rule === "17") {rules.Reverse = true;}
 }
 
 for (var i = 1; i <= response; i++) {
@@ -62,13 +48,13 @@ for (var i = 1; i <= response; i++) {
         }
         arr.push("Bong");
     }
-    if (i % 17 == 0 && rules.Reverse){
+    if (i % 17 === 0 && rules.Reverse){
     arr = arr.reverse();
     }
     if (arr.length === 0){
         arr.push(i);
     }
-    string = "";
+    var string = "";
     for(var j=0;j<arr.length;j++)
     {
        string = string.concat(arr[j]);
