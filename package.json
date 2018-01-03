@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JoshAdamPowell/FizzBuzzJS/issues"
   },
-  "homepage": "https://github.com/JoshAdamPowell/FizzBuzzJS#readme"
+  "homepage": "https://github.com/JoshAdamPowell/FizzBuzzJS#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.7"
+  }
 }
