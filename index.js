@@ -5,6 +5,7 @@ response = parseInt(response);
 var rules ={};
 var done = false;
 while (!done) {
+    var ruleset = [[3, "Fizz"],[13, "Fezz"], [5, "Buzz"],[7, "Bang"], [11, "Bong"]]
     console.log("Please enter the rules you wish to apply, one by one, pressing enter after each one.");
     console.log("When you are done just press enter on a blank line.");
     console.log("Possible rules: 3, 5, 7, 11, 13, 17");
@@ -14,7 +15,7 @@ while (!done) {
             console.log(item);
         }
     }
-    
+
 
     var rule = readline.prompt();
     if (rule === "") {done = true;}
@@ -28,6 +29,7 @@ while (!done) {
 
 for (var i = 1; i <= response; i++) {
     var arr = [];
+    var words = ruleset.filter(([key, _]) => i % key === 0).map(([_,value]) => value);
     if (i % 3 === 0 && rules.Fizz){
         arr.push("Fizz");
     }
